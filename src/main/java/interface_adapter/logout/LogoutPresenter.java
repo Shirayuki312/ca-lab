@@ -33,7 +33,6 @@ public class LogoutPresenter implements LogoutOutputBoundary {
         // We also need to set the username in the LoggedInState to
         // the empty string.
 
-        // TODO: have prepareSuccessView update the LoggedInState
         final LoggedInState loggedInState = loggedInViewModel.getState();
         loggedInState.setUsername("");
         loggedInViewModel.firePropertyChange();
@@ -41,7 +40,6 @@ public class LogoutPresenter implements LogoutOutputBoundary {
         // 2. set the username in the state to the empty string
         // 3. firePropertyChanged so that the View that is listening is updated.
 
-        // TODO: have prepareSuccessView update the LoginState
         final LoginState loginState = loginViewModel.getState();
         loginState.setUsername("");
         loginViewModel.firePropertyChange();
