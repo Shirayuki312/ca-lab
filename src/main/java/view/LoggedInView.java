@@ -52,7 +52,13 @@ public class LoggedInView extends JPanel implements ActionListener, PropertyChan
         changePassword = new JButton("Change Password");
         buttons.add(changePassword);
 
-        logOut.addActionListener(this);
+        logOut.addActionListener(
+                evt -> {
+                    if (evt.getSource().equals(logOut)) {
+                        this.logoutController.execute();
+                    }
+                }
+        );
 
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
