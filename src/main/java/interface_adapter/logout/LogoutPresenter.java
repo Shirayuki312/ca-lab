@@ -42,6 +42,7 @@ public class LogoutPresenter implements LogoutOutputBoundary {
 
         final LoginState loginState = loginViewModel.getState();
         loginState.setUsername("");
+        loginState.setPassword("");
         loginViewModel.firePropertyChange();
         // 1. get the LoginState out of the appropriate View Model,
         // 2. set the username in the state to be the username of the user that just logged out,
